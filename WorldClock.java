@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-public class RelogioMundial extends JFrame {
+public class WorldClock extends JFrame {
     private static final long serialVersionUID = 1L;
     private JPanel painelPrincipal;
     private JLabel horarioLondres;
