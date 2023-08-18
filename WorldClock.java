@@ -18,7 +18,7 @@ public class WorldClock extends JFrame {
     private JLabel horarioSydney;
     
     public RelogioMundial() {
-        super("Relógio Mundial");
+        super("World Clock");
         painelPrincipal = new JPanel();
         painelPrincipal.setLayout(new GridLayout(4, 1));
         painelPrincipal.setBackground(Color.WHITE);
