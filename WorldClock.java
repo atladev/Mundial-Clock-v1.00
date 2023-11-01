@@ -14,8 +14,8 @@ public class WorldClock extends JFrame {
     private JPanel painelPrincipal;
     private JLabel horarioLondres;
     private JLabel horarioNovaYork;
-    private JLabel horarioTokyo;
-    private JLabel horarioSydney;
+    private JLabel tokyo;
+    private JLabel sydney;
     
     public RelogioMundial() {
         super("World Clock");
@@ -25,19 +25,19 @@ public class WorldClock extends JFrame {
         
         horarioLondres = new JLabel("", SwingConstants.CENTER);
         horarioNovaYork = new JLabel("", SwingConstants.CENTER);
-        horarioTokyo = new JLabel("", SwingConstants.CENTER);
-        horarioSydney = new JLabel("", SwingConstants.CENTER);
+        tokyo = new JLabel("", SwingConstants.CENTER);
+        sydney = new JLabel("", SwingConstants.CENTER);
         
         Font fonteRelogio = new Font("Arial", Font.BOLD, 32);
         horarioLondres.setFont(fonteRelogio);
         horarioNovaYork.setFont(fonteRelogio);
-        horarioTokyo.setFont(fonteRelogio);
-        horarioSydney.setFont(fonteRelogio);
+        tokyo.setFont(fonteRelogio);
+        sydney.setFont(fonteRelogio);
         
         painelPrincipal.add(horarioLondres);
         painelPrincipal.add(horarioNovaYork);
-        painelPrincipal.add(horarioTokyo);
-        painelPrincipal.add(horarioSydney);
+        painelPrincipal.add(tokyo);
+        painelPrincipal.add(sydney);
         
         atualizarHorarios();
         
@@ -54,19 +54,19 @@ public class WorldClock extends JFrame {
             
             SimpleDateFormat formatadorLondres = new SimpleDateFormat("HH:mm");
             formatadorLondres.setTimeZone(TimeZone.getTimeZone("Europe/London"));
-            horarioLondres.setText("Londres: " + formatadorLondres.format(agora));
+            horarioLondres.setText("London: " + formatadorLondres.format(agora));
             
             SimpleDateFormat formatadorNovaYork = new SimpleDateFormat("HH:mm");
             formatadorNovaYork.setTimeZone(TimeZone.getTimeZone("America/New_York"));
-            horarioNovaYork.setText("Nova York: " + formatadorNovaYork.format(agora));
+            horarioNovaYork.setText("New York: " + formatadorNovaYork.format(agora));
             
             SimpleDateFormat formatadorTokyo = new SimpleDateFormat("HH:mm");
             formatadorTokyo.setTimeZone(TimeZone.getTimeZone("Asia/Tokyo"));
-            horarioTokyo.setText("Tóquio: " + formatadorTokyo.format(agora));
+            tokyo.setText("Tokyo: " + formatadorTokyo.format(agora));
             
             SimpleDateFormat formatadorSydney = new SimpleDateFormat("HH:mm");
             formatadorSydney.setTimeZone(TimeZone.getTimeZone("Australia/Sydney"));
-            horarioSydney.setText("Sydney: " + formatadorSydney.format(agora));
+            sydney.setText("Sydney: " + formatadorSydney.format(agora));
             
             try {
                 Thread.sleep(1000);
