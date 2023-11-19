@@ -11,31 +11,31 @@ import javax.swing.SwingConstants;
 
 public class WorldClock extends JFrame {
     private static final long serialVersionUID = 1L;
-    private JPanel painelPrincipal;
-    private JLabel horarioLondres;
-    private JLabel horarioNovaYork;
+    private JPanel principal;
+    private JLabel london;
+    private JLabel newYork;
     private JLabel tokyo;
     private JLabel sydney;
     
-    public RelogioMundial() {
+    public WorldClock() {
         super("World Clock");
-        painelPrincipal = new JPanel();
-        painelPrincipal.setLayout(new GridLayout(4, 1));
-        painelPrincipal.setBackground(Color.WHITE);
+        principal = new JPanel();
+        principal.setLayout(new GridLayout(4, 1));
+        principal.setBackground(Color.WHITE);
         
-        horarioLondres = new JLabel("", SwingConstants.CENTER);
-        horarioNovaYork = new JLabel("", SwingConstants.CENTER);
+        london = new JLabel("", SwingConstants.CENTER);
+        newYork = new JLabel("", SwingConstants.CENTER);
         tokyo = new JLabel("", SwingConstants.CENTER);
         sydney = new JLabel("", SwingConstants.CENTER);
         
-        Font fonteRelogio = new Font("Arial", Font.BOLD, 32);
-        horarioLondres.setFont(fonteRelogio);
-        horarioNovaYork.setFont(fonteRelogio);
-        tokyo.setFont(fonteRelogio);
-        sydney.setFont(fonteRelogio);
+        Font font = new Font("Arial", Font.BOLD, 32);
+        horarioLondres.setFont(font);
+        horarioNovaYork.setFont(font);
+        tokyo.setFont(font);
+        sydney.setFont(font);
         
-        painelPrincipal.add(horarioLondres);
-        painelPrincipal.add(horarioNovaYork);
+        painelPrincipal.add(london);
+        painelPrincipal.add(newYork);
         painelPrincipal.add(tokyo);
         painelPrincipal.add(sydney);
         
