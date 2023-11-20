@@ -34,21 +34,21 @@ public class WorldClock extends JFrame {
         tokyo.setFont(font);
         sydney.setFont(font);
         
-        painelPrincipal.add(london);
-        painelPrincipal.add(newYork);
-        painelPrincipal.add(tokyo);
-        painelPrincipal.add(sydney);
+        principal.add(london);
+        principal.add(newYork);
+        principal.add(tokyo);
+        principal.add(sydney);
         
-        atualizarHorarios();
+        refresh();
         
-        getContentPane().add(painelPrincipal);
+        getContentPane().add(principal);
         setSize(400, 400);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
     
-    private void atualizarHorarios() {
+    private void refresh() {
         while(true) {
             Date agora = new Date();
             
@@ -77,6 +77,6 @@ public class WorldClock extends JFrame {
     }
     
     public static void main(String[] args) {
-        new RelogioMundial();
+        new WorldClock();
     }
 }
